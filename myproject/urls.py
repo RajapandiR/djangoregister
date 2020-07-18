@@ -19,7 +19,8 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('myapp.urls')),
+    path('login/', views.LoginAPIView.as_view()),
     path('email-verify/', views.VerifyEmail.as_view(), name="email-verify"),
-    path('login/', views.LoginAPIView.as_view(), name='login'),
+    # path('login/', views.LoginAPIView.as_view(), name='login'),
     # path('activate/<uidb64>/<token>', views.ActivateView, name='activate'),
 ]
